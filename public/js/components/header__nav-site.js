@@ -11,7 +11,7 @@ class SiteNav extends React.Component {
   render() {
     return (<div id='block__site-nav'>
       <div className='nav-link'>
-        <a href='/' data-tip='Home' data-place='right' data-effect='float'><IconHome></IconHome></a>
+        <a href='/build' data-tip='Home' data-place='right' data-effect='float'><IconHome></IconHome></a>
       </div>
       <div className='nav-link'>
         <a href='/about' data-tip='About' data-place='right' data-effect='float'><IconQuestion></IconQuestion></a>

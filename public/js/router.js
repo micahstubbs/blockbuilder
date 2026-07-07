@@ -29,13 +29,15 @@ import NotFound from './components/not-found.js';
 // Functionality
 //
 // ========================================================================
+// The editor is deployed under bl.ockss.org/build, so every route lives
+// beneath the /build prefix.
 var routes = (
   <Route handler={App} >
-    <Route name='home' path='/' handler={Home}></Route>
-    <Route name='about' path='/about' handler={About}></Route>
-    <Route name='gallery' path='/gallery' handler={Gallery}></Route>
-    <Route name='user' path='/:username' handler={User}></Route>
-    <Route name='block' path='/:username/:gistId' handler={Block}></Route>
+    <Route name='home' path='/build' handler={Home}></Route>
+    <Route name='about' path='/build/about' handler={About}></Route>
+    <Route name='gallery' path='/build/gallery' handler={Gallery}></Route>
+    <Route name='user' path='/build/:username' handler={User}></Route>
+    <Route name='block' path='/build/:username/:gistId' handler={Block}></Route>
     <NotFoundRoute handler={NotFound}/>
   </Route>
 );

@@ -27,7 +27,7 @@ var WebAPIUtils = {
     logger.log('WebAPIUtils:fetchGist', 'fetching : ' + gistId);
 
     return new Promise(function(resolve, reject) {
-      window.d3.json("/api/gist/" + gistId, function(err, data) {
+      window.d3.json("/build/api/gist/" + gistId, function(err, data) {
         if (err) { return reject(err); }
         // TODO: make this use reliable error handling
         if (data.statusCode == 404 || data.statusCode == 500) return reject(data);
@@ -77,7 +77,7 @@ var WebAPIUtils = {
     logger.log('WebAPIUtils:forkGist:prepare', 'preparing to fork gist...');
 
     return new Promise(function(resolve, reject) {
-      request.post('/api/fork')
+      request.post('/build/api/fork')
         .send({ "gist": JSON.stringify(gist) })
         .end(function(err, res) {
           if (err) {
@@ -98,7 +98,7 @@ var WebAPIUtils = {
     logger.log('WebAPIUtils:saveGist:prepare', 'preparing to save gist...');
 
     return new Promise(function(resolve, reject) {
-      request.post('/api/save')
+      request.post('/build/api/save')
         .send({ "gist": JSON.stringify(gist) })
         .end(function(err, res) {
           if (err) {
@@ -119,7 +119,7 @@ var WebAPIUtils = {
     logger.log('WebAPIUtils:saveGist:prepare', 'preparing to save gist...');
 
     return new Promise(function(resolve, reject) {
-      request.post('/api/thumbnail')
+      request.post('/build/api/thumbnail')
         .send({
           "gistId": data.gistId,
           "image": data.image
@@ -141,7 +141,7 @@ var WebAPIUtils = {
   fetchMe() {
     logger.log('WebAPIUtils:fetchMe:prepare', 'preparing to get me...');
     return new Promise(function(resolve, reject) {
-      request.get('/api/me')
+      request.get('/build/api/me')
         .end(function(err, res) {
           if (err) {
             logger.log('error:fetchMe:response', 'error getting me: ' + err);

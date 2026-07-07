@@ -241,12 +241,12 @@ var Home = React.createClass({
               </a>
             </p>
             <p className='tut'>
-              Just change the URL of your favorite block from <span className='domain'>bl.ocks.org</span> to <span className='domain'>blockbuilder.org</span> and start hacking!
+              Just change the URL of your favorite block from <span className='domain'>bl.ocks.org</span> to <span className='domain'>bl.ockss.org/build</span> and start hacking!
             </p>
             <h3>Bookmarklet</h3>
             <p className='tut'>
-              It can get annoying to edit the URL all the time. If you drag this link: <a href='javascript:(function()%7Bvar current %3D window.location %2B ""%3Bvar newUrl %3D current.replace("http%3A%2F%2Fbl.ocks.org"%2C "http%3A%2F%2Fblockbuilder.org")%3BnewUrl %3D newUrl.replace("https%3A%2F%2Fgist.github.com"%2C "http%3A%2F%2Fblockbuilder.org")%3Bwindow.location %3D newUrl%7D)()'>Bl.ock Builder</a> into
-              your bookmark bar and click it while on a gist or block it will take you to blockbuilder.org!
+              It can get annoying to edit the URL all the time. If you drag this link: <a href='javascript:(function()%7Bvar current %3D window.location %2B ""%3Bvar newUrl %3D current.replace("http%3A%2F%2Fbl.ocks.org"%2C "https%3A%2F%2Fbl.ockss.org%2Fbuild")%3BnewUrl %3D newUrl.replace("https%3A%2F%2Fgist.github.com"%2C "https%3A%2F%2Fbl.ockss.org%2Fbuild")%3Bwindow.location %3D newUrl%7D)()'>Bl.ock Builder</a> into
+              your bookmark bar and click it while on a gist or block it will take you to bl.ockss.org/build!
             </p>
 
             <h3>How it works</h3>

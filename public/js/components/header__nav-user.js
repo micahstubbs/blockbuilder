@@ -23,7 +23,7 @@ var UserNav = React.createClass({
     });
   },
   login: function() {
-    window.open("/auth/github/", "_blank");
+    window.open("/build/auth/github/", "_blank");
   },
   render: function render() {
     var auth;
@@ -40,7 +40,7 @@ var UserNav = React.createClass({
       auth = (
         <div id='user'>
           <a href={`/search#user=${user.login}`} data-tip="View my blocks"><img src={ user.avatar_url }></img></a>
-          <a className='header-link' id='logout' href={ "/auth/logout/?redirect=" + this.props.path }>logout</a>
+          <a className='header-link' id='logout' href={ "/build/auth/logout/?redirect=" + this.props.path }>logout</a>
         </div>
       );
     }
